@@ -1,0 +1,75 @@
+* {box-sizing: border-box;} /* regra utilitária, sempre colocar em todo o site */
+
+body {
+    background-color: whitesmoke;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+
+}
+
+h1 {
+    background: black;
+    color: white;
+    margin: 0;
+    padding-left: 10px;
+}
+
+#imagem-decorativa {
+    background-image: url(../imagens/teclado.jpg);
+    height: 445px;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+main {
+    width: 98%; /* largura */
+    margin: auto;
+}
+
+footer {
+    height: 150px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 2%, rgba(3,3,193,1) 100%, rgba(0,212,255,1) 100%);
+
+    display: flex;
+    text-align: center;
+    justify-content: center; /* alinhamento na horizontal */
+    align-items: center; /* alinhamento na vertical */
+
+    color: white;
+
+    clear: both; /* resolve efeito do float no rodapé */
+
+}
+
+/* DIV que envolve as seções */
+.treinamentos {
+    display: flex; /* deixa lado a lado tudo dentro da div */
+    justify-content: space-evenly;
+}
+
+/* Seções filhas da div  */
+.treinamentos section {
+    border-radius: 5px; /* arredondamento das bordas */
+    padding: 7px;
+    text-align: center;
+    width: 22%;
+    box-shadow: black 1px 0px 3px;
+
+}
+
+.flutuar-esquerda{
+    width: 250px;
+    float: left; 
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding-top: 3px; 
+}
+
+@media screen and (max-width: 600px) {
+    .treinamentos { flex-direction: column; }
+    .treinamentos section {
+        width: auto;
+        margin-bottom: 10px;
+    }
+}

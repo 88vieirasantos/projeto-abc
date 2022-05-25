@@ -1,0 +1,57 @@
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+
+    overflow: hidden;
+}
+
+/* Estamos pegando os Li, pois são os itens da lista */
+.menu li {
+    float: left;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none; /* tira o underline */
+    display: block; 
+    padding: 10px 10px; /* primeiro valor em cima e embaixo, segundo valor direita e esquerda */ /* mexendo no primeiro padding, você consegue aumentar o espaço em azul */
+}
+
+.menu a:hover {
+    /* background-color: white; */
+    color: black;
+}
+
+/* Escondendo a opção Menu */
+.menu li.icone {display: none;}
+
+@media screen and (max-width: 760px){
+
+    /* Escondendo os itens do menu */
+    .menu li {display: none;}
+
+    /* Exibindo novamente o item Menu */
+    .menu li.icone {
+        display: block;
+        float: left;
+    }
+
+    .menu.aberto li {
+        float: none;
+        display: inline;
+    }
+
+    .menu.aberto { position: relative}
+
+    .menu.aberto li.icone { 
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+
+}
+
+
